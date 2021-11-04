@@ -3,6 +3,7 @@ from flask_socketio import SocketIO, emit
 
 app = Flask(__name__)
 socketio = SocketIO(app)
+socketio.init_app(app, cors_allowed_origins="*")
 
 values = {
     'slider1': 25,
